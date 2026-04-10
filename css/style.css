@@ -1,0 +1,424 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+ @font-face {
+            font-family: 'Bebas Neue';
+            font-style: normal;
+            font-weight: 400;
+            src:
+                local("Bebas Neue"),
+                url("/fonts/BebasNeue-Regular.ttf") format("truetype");
+        }
+
+ @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            src:
+                local("Poppins"),
+                url("/fonts/Poppins-Regular.ttf") format("truetype");
+        }
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+body {
+  max-width: 1920px;
+  max-height: 1080px;
+  background-color: #FAFAFA;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header figure {
+  margin: 0;
+}
+
+header figure img {
+  margin-top: 33px;
+  margin-left: 160px;
+  width: 171px;
+  height: 36px;
+  padding: 7px 0px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  gap: 56px;
+  margin-right: 160px;
+  max-width: 499px;
+  max-height: 27px;
+  margin-top: 46px;
+  padding: 0.82px 0px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #424241;
+  font-family: 'Poppins', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  max-width: 126px;
+}
+
+section.hero div.image {
+  position: absolute;
+  background-color: #7EDAD2;
+  max-height: 938.08px;
+  max-width: 1112px;
+  top: 0px;
+  right: 0px;
+  z-index: -1; 
+}
+
+.title {
+  max-width: 784px;
+  max-height: 428px;
+  margin-left: 160px;
+  margin-top: 111px;
+}
+.title > h1 {
+  font-size: 120px;
+  line-height: 120px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: 'Bebas Neue', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+}
+
+.title > h1 span {
+  color: #7EDAD2;
+}
+
+.title > p {
+  font-family: 'Poppins', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin-top: 0;
+  font-size: 24px;
+  max-width: 719px;
+  line-height: 40px;
+  color: #909090;
+  margin-bottom: 50px;
+}
+
+.title > a {
+  font-family: 'Poppins', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #FAFAFA;
+  padding: 16.5px 33px;
+  margin: 8px;
+  background-color: #7EDAD2;
+  font-size: 18px;
+  width: 112px;
+  height: 27px;
+}
+
+.hero_numbers {
+  display: flex;
+  margin-left: 160px;
+  margin-top: 56px;
+  max-width: 500px;
+  max-height: 85px;
+  justify-content: space-between;
+}
+
+.hero_numbers > div {
+    display: flex;
+    flex-direction: column;
+    max-width: 160px;
+    max-height: 85px;
+    font-family: 'Bebas Neue', 'Arial Narrow', Arial, sans-serif;
+    font-size: 48px;
+    color: #424241;
+    text-align: center;
+}
+
+.hero_numbers span {
+    font-family: 'Poppins', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #909090;
+}
+
+.categories {
+  display: flex;
+  max-width: 1600px;
+  max-height: 234px;
+  margin-top: 80px;
+  margin-left: 160px;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.categories > article {
+  background-color: #FAFAFA;
+  max-width: 376px;
+  max-height: 234px;
+  padding: 32px;
+  margin: 8px;
+}
+
+.categories img {
+  width: 64px;
+  height: 64px;
+}
+
+.categories h3 {
+  margin: 8px 0px;
+  font-family: 'Poppins', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  max-width: 219px;
+  max-height: 36px;
+  width: fit-content;
+}
+
+.categories p {
+  max-width: 300px;
+  max-height: 54px;
+  font-family: 'Poppins', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #909090;
+}
