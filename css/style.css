@@ -7,24 +7,6 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
- @font-face {
-            font-family: 'Bebas Neue';
-            font-style: normal;
-            font-weight: 400;
-            src:
-                local("Bebas Neue"),
-                url("/fonts/BebasNeue-Regular.ttf") format("truetype");
-        }
-
- @font-face {
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 400;
-            src:
-                local("Poppins"),
-                url("/fonts/Poppins-Regular.ttf") format("truetype");
-        }
-
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
